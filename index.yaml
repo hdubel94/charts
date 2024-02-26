@@ -37,6 +37,57 @@ entries:
       urls:
         - https://github.com/k8s-at-home/charts/releases/download/common-3.1.0/common-3.1.0.tgz
       version: 3.1.0
+      appVersion: 3.9.1
+      created: "2020-11-23T21:35:43.885057058Z"
+      dependencies:
+        - name: common
+          repository: https://k8s-at-home.com/charts/
+          version: 1.6.1
+      description:
+        Perl client used to update dynamic DNS entries for accounts on Dynamic
+        DNS Network Service Providers
+      digest: d0bf70644d33d141ab6b3ff2d607440b7ba136af4006edc5139eadd7c3449b03
+      home: https://github.com/ddclient/ddclient
+      icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ddclient-logo.png
+      keywords:
+        - ddclient
+        - dns
+      maintainers:
+        - email: jeff@billimek.com
+          name: billimek
+      name: ddclient
+      sources:
+        - https://github.com/ddclient/ddclient
+        - https://hub.docker.com/r/linuxserver/ddclient
+      urls:
+        - https://github.com/k8s-at-home/charts/releases/download/ddclient-1.1.1/ddclient-1.1.1.tgz
+      version: 1.1.1
+    - apiVersion: v2
+      appVersion: 3.9.1
+      created: "2020-11-23T15:23:37.663640523Z"
+      dependencies:
+        - name: common
+          repository: https://k8s-at-home.com/charts/
+          version: ^1.6.1
+      description:
+        Perl client used to update dynamic DNS entries for accounts on Dynamic
+        DNS Network Service Providers
+      digest: a26b0fd757d9ac513137b6ff9774c8899c631e604f285afa18eb35ebc6df2855
+      home: https://github.com/ddclient/ddclient
+      icon: https://raw.githubusercontent.com/linuxserver/docker-templates/master/linuxserver.io/img/ddclient-logo.png
+      keywords:
+        - ddclient
+        - dns
+      maintainers:
+        - email: jeff@billimek.com
+          name: billimek
+      name: ddclient
+      sources:
+        - https://github.com/ddclient/ddclient
+        - https://hub.docker.com/r/linuxserver/ddclient
+      urls:
+        - https://github.com/k8s-at-home/charts/releases/download/ddclient-1.1.0/ddclient-1.1.0.tgz
+      version: 1.1.0
   deconz:
     - annotations:
         artifacthub.io/changes: |-

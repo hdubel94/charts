@@ -2223,6 +2223,35 @@ entries:
     - annotations:
         artifacthub.io/changes: |-
           - kind: changed
+            description: Upgraded `common` chart dependency to version rebase v1.0.0
+      apiVersion: v2
+      appVersion: v2.1.1
+      created: "2024-02-26T14:41:36.623532012Z"
+      dependencies:
+        - name: common
+          repository: https://hdubel94.github.io/library-charts
+          version: 1.0.0
+      description: Deluge is a torrent download client
+      digest: 1a49ce3e9586901be963b2e194f5176397cfdac7386d4cc5f700e070d0ded8d0
+      home: https://github.com/hdubel94/charts/tree/master/charts/stable/deluge
+      icon: https://avatars2.githubusercontent.com/u/6733935?v=3&s=200
+      keywords:
+        - deluge
+        - torrent
+      kubeVersion: ">=1.16.0-0"
+      maintainers:
+        - email: no-reply@no-reply.com
+          name: hdubel94
+      name: deluge
+      sources:
+        - https://hub.docker.com/r/linuxserver/deluge/
+        - https://deluge-torrent.org/
+      urls:
+        - https://github.com/hdubel94/charts/releases/download/deluge-v1.0.0/deluge-1.0.0.tgz
+      version: 5.4.2
+    - annotations:
+        artifacthub.io/changes: |-
+          - kind: changed
             description: Upgraded `common` chart dependency to version 4.5.2
       apiVersion: v2
       appVersion: v2.0.3-2201906121747

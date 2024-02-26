@@ -16,3 +16,4 @@ charts/**/charts
 Gemfile.lock
 angel.yaml
 *.tgz
+.DS_Store

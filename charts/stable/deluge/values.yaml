@@ -5,6 +5,14 @@
 # https://github.com/hdubel94/library-charts/tree/main/charts/stable/common/values.yaml
 #
 
+tolerations:
+  - key: "hardware"
+    operator: "Equal"
+    value: "nvidia-jetson"
+    effect: "NoSchedule"
+nodeSelector:
+  hardware: "nvidia-jetson"
+
 image:
   # -- image repository
   repository: linuxserver/deluge
@@ -21,7 +29,7 @@ env:
   # -- Specify the group ID the application will run as
   PGID: "1000"
   # -- Set the container timezone
-  TZ: "Europe/London"
+  TZ: "America/New_York"
   # -- Set the loglevel output when running Deluge
   DELUGE_LOGLEVEL: "error"
 
@@ -43,8 +51,10 @@ ingress:
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
     mountPath: /config
   downloads:
-    enabled: false
+    enabled: true
+    type: hostPath
+    hostPath: /data/downloads
     mountPath: /downloads

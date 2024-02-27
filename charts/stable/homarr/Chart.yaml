@@ -1,0 +1,26 @@
+---
+apiVersion: v2
+appVersion: v0.15.0
+description: Homarr is a torrent download client
+name: homarr
+version: 1.0.0
+kubeVersion: ">=1.16.0-0"
+keywords:
+  - homarr
+  - torrent
+home: https://github.com/hdubel94/charts/tree/master/charts/stable/homarr
+icon: https://homarr.dev/img/logo.png
+sources:
+  - https://hub.docker.com/r/linuxserver/homarr/
+  - https://homarr-torrent.org/
+maintainers:
+  - name: hdubel94
+    email: no-reply@no-reply.com
+dependencies:
+  - name: common
+    repository: https://hdubel94.github.io/library-charts/
+    version: 1.0.0
+annotations:
+  artifacthub.io/changes: |-
+    - kind: changed
+      description: Add Homarr

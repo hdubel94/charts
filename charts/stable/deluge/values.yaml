@@ -10,6 +10,7 @@ tolerations:
     operator: "Equal"
     value: "nvidia-jetson"
     effect: "NoSchedule"
+    
 nodeSelector:
   hardware: "nvidia-jetson"
 
@@ -61,5 +62,5 @@ persistence:
   downloads:
     enabled: true
     type: hostPath
-    hostPath: /data/downloads
+    hostPath: /data/torrents
     mountPath: /downloads

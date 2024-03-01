@@ -7,9 +7,9 @@
 
 image:
   # -- image repository
-  repository: ghcr.io/k8s-at-home/sonarr
+  repository: lscr.io/linuxserver/sonarr
   # @default -- chart.appVersion
-  tag:
+  tag: 4.0.2
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -17,7 +17,7 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: America/New_York
 
 # -- Configures service settings for the chart.
 # @default -- See values.yaml
@@ -61,10 +61,10 @@ probes:
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
 
   media:
-    enabled: false
+    enabled: true
     mountPath: /media
 
 metrics:

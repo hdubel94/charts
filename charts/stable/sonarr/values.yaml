@@ -5,6 +5,15 @@
 # https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
 #
 
+tolerations:
+  - key: hardware
+    operator: Equal
+    value: nvidia-jetson
+    effect: NoSchedule
+
+nodeSelector:
+  hardware: "nvidia-jetson"
+
 image:
   # -- image repository
   repository: lscr.io/linuxserver/sonarr

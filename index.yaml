@@ -879,6 +879,36 @@ entries:
     - annotations:
         artifacthub.io/changes: |-
           - kind: changed
+            description: Upgraded `common` chart rebase v1.0.0
+      apiVersion: v2
+      appVersion: v4.0.2
+      created: "2024-03-02T14:41:56.943142851Z"
+      dependencies:
+        - name: common
+          repository: https://hdubel94.github.io/library-charts
+          version: 1.0.0
+      description: Smart PVR for newsgroup and bittorrent users
+      digest: d83cb3a28831f26f2c884b72ed69302e44d33f9f8082418da2446d0068106ba0
+      home: https://github.com/hdubel94/charts/tree/master/charts/stable/sonarr
+      icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
+      keywords:
+        - sonarr
+        - torrent
+        - usenet
+      kubeVersion: ">=1.16.0-0"
+      maintainers:
+        - email: jeff@billimek.com
+          name: billimek
+      name: sonarr
+      sources:
+        - https://github.com/Sonarr/Sonarr
+        - https://github.com/k8s-at-home/container-images
+      urls:
+        - hhttps://github.com/hdubel94/charts/releases/download/sonarr-v1.0.0/sonarr-1.0.0.tgz
+      version: 1.0.0
+    - annotations:
+        artifacthub.io/changes: |-
+          - kind: changed
             description: Upgraded `common` chart dependency to version 4.5.2
       apiVersion: v2
       appVersion: v3.0.8.1507

@@ -904,7 +904,7 @@ entries:
         - https://github.com/Sonarr/Sonarr
         - https://github.com/k8s-at-home/container-images
       urls:
-        - hhttps://github.com/hdubel94/charts/releases/download/sonarr-v1.0.0/sonarr-1.0.0.tgz
+        - https://github.com/hdubel94/charts/releases/download/sonarr-v1.0.0/sonarr-1.0.0.tgz
       version: 1.0.0
     - annotations:
         artifacthub.io/changes: |-

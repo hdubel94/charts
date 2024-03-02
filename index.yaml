@@ -888,7 +888,7 @@ entries:
           repository: https://hdubel94.github.io/library-charts
           version: 1.0.0
       description: Smart PVR for newsgroup and bittorrent users
-      digest: d83cb3a28831f26f2c884b72ed69302e44d33f9f8082418da2446d0068106ba0
+      digest: 91dbc6e76e147fce42fd1bdb0453e794e77b027a626119207f1d2dc571029635
       home: https://github.com/hdubel94/charts/tree/master/charts/stable/sonarr
       icon: https://github.com/Sonarr/Sonarr/blob/phantom-develop/Logo/512.png?raw=true
       keywords:

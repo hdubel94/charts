@@ -7,10 +7,10 @@
 
 image:
   # -- image repository
-  repository: ghcr.io/home-assistant/home-assistant
+  repository: lscr.io/linuxserver/homeassistant
   # -- image tag
   # @default -- chart.appVersion
-  tag:
+  tag: 2024.2.5
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -18,7 +18,7 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: America/New_York
 
 # -- Configures service settings for the chart. Normally this does not need to be modified.
 # @default -- See values.yaml
@@ -32,7 +32,12 @@ ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
-    enabled: false
+    enabled: true
+    hosts:
+      - host: "hass.crimsyn.local"
+        paths:
+          - path: /
+            pathType: Prefix
 
 # -- Enable devices to be discoverable
 # hostNetwork: true
@@ -48,7 +53,7 @@ securityContext:
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
   # -- Configure a hostPathMount to mount a USB device in the container.
   # @default -- See values.yaml
   usb:
@@ -139,7 +144,7 @@ addons:
   #    This allows for easy access to configuration.yaml
   # @default -- See values.yaml
   codeserver:
-    enabled: false
+    enabled: true
     args:
       - --auth
       - none

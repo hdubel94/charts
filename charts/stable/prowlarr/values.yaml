@@ -55,7 +55,7 @@ persistence:
   plex:
     enabled: true
     storageClass: nfs-plex
-    accessMode: ReadWriteMany
+    existingClaim: plex-media-prowlarr
     mountPath: /data/media
   downloads:
     enabled: true

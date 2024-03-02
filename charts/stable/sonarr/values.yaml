@@ -31,7 +31,12 @@ ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
-    enabled: false
+    enabled: true
+    hosts:
+      - host: "sonarr.crimsyn.local"
+        paths:
+          - path: /
+            pathType: Prefix
 
 # -- Configures the probes for the main Pod.
 # @default -- See values.yaml
@@ -62,10 +67,16 @@ probes:
 persistence:
   config:
     enabled: true
-
-  media:
+  plex:
     enabled: true
-    mountPath: /media
+    storageClass: nfs-plex
+    existingClaim: plex-media-radarr
+    mountPath: /data/media
+  downloads:
+    enabled: true
+    type: hostPath
+    hostPath: /data/torrents
+    mountPath: /data/torrents
 
 metrics:
   # -- Enable and configure Exportarr sidecar and Prometheus serviceMonitor.

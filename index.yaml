@@ -627,6 +627,38 @@ entries:
     - annotations:
         artifacthub.io/changes: |-
           - kind: changed
+            description: Switch to 'common' v1.0.0
+      apiVersion: v2
+      appVersion: v1.13.3
+      created: "2024-03-01T14:41:52.198994628Z"
+      dependencies:
+        - name: common
+          repository: https://hdubel94.github.io/library-charts
+          version: 1.0.0
+      description:
+        Indexer manager/proxy built on the popular arr net base stack to
+        integrate with your various PVR apps.
+      digest: 10047c307cda2148e1d06ff3b8204db53047c24ebad0041813c180d698ecdeb3
+      home: https://github.com/hdubel94/charts/tree/master/charts/stable/prowlarr
+      icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
+      keywords:
+        - prowlarr
+        - torrent
+        - usenet
+      kubeVersion: ">=1.16.0-0"
+      maintainers:
+        - email: no-reply@noreply.com
+          name: hdubel94
+      name: prowlarr
+      sources:
+        - https://github.com/Prowlarr/Prowlarr
+        - https://github.com/k8s-at-home/container-images
+      urls:
+        - https://github.com/hdubel94/charts/releases/download/prowlarr-v1.0.0/prowlarr-1.0.0.tgz
+      version: 1.0.0
+    - annotations:
+        artifacthub.io/changes: |-
+          - kind: changed
             description: Upgraded `common` chart dependency to version 4.5.2
       apiVersion: v2
       appVersion: v0.3.0.1710

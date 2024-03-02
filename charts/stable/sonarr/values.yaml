@@ -70,7 +70,7 @@ persistence:
   plex:
     enabled: true
     storageClass: nfs-plex
-    existingClaim: plex-media-radarr
+    existingClaim: plex-media
     mountPath: /data/media
   downloads:
     enabled: true

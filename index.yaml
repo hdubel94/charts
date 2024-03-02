@@ -638,7 +638,7 @@ entries:
       description:
         Indexer manager/proxy built on the popular arr net base stack to
         integrate with your various PVR apps.
-      digest: 10047c307cda2148e1d06ff3b8204db53047c24ebad0041813c180d698ecdeb3
+      digest: 076140fa07c49790eca36e6361f184ad4a7873dfcc77c5705ddf07ed0a379fe9
       home: https://github.com/hdubel94/charts/tree/master/charts/stable/prowlarr
       icon: https://raw.githubusercontent.com/Prowlarr/Prowlarr/develop/Logo/400.png
       keywords:

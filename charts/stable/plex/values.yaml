@@ -5,11 +5,35 @@
 # https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common/values.yaml
 #
 
+runtimeClassName: nvidia
+
+tolerations:
+  - key: hardware
+    operator: Equal
+    value: nvidia-jetson
+    effect: NoSchedule
+
+nodeSelector:
+  hardware: "nvidia-jetson"
+
+affinity:
+  nodeAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: "hardware"
+          operator: In
+          values:
+          - "nvidia-jetson"
+
+limits:
+  nvidia.com/gpu: 1
+
 image:
   # -- image repository
-  repository: ghcr.io/k8s-at-home/plex
+  repository: linuxserver/plex
   # @default -- chart.appVersion
-  tag:
+  tag: 1.40.0
   # -- image pull policy
   pullPolicy: IfNotPresent
 
@@ -19,7 +43,10 @@ image:
 # @default -- See below
 env:
   # -- Set the container timezone
-  TZ: UTC
+  TZ: America/New_York
+  NVIDIA_VISIBLE_DEVICES: all
+  NVIDIA_DRIVER_CAPABILITIES: compute,video,utility
+  VERSION: plexpass
   # ADVERTISE_IP:
   # ALLOWED_NETWORKS:
   # PLEX_CLAIM:
@@ -65,7 +92,12 @@ ingress:
   # -- Enable and configure ingress settings for the chart under this key.
   # @default -- See values.yaml
   main:
-    enabled: false
+    enabled: true
+    hosts:
+      - host: "plex.crimsyn.local"
+        paths:
+          - path: /
+            pathType: Prefix
 
 # -- Enable devices to be discoverable
 hostNetwork: false
@@ -74,12 +106,20 @@ hostNetwork: false
 # @default -- See values.yaml
 persistence:
   config:
-    enabled: false
+    enabled: true
     mountPath: /config
 
   transcode:
-    enabled: false
+    enabled: true
+    type: hostPath
+    hostPath: /tmp/plex/transcode
     mountPath: /transcode
+
+  plex:
+    enabled: true
+    storageClass: nfs-plex
+    existingClaim: plex-media
+    mountPath: /data/media
 
 # -- Configure the Security Context for the Pod
 podSecurityContext: {}

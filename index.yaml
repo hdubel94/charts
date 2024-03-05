@@ -557,6 +557,35 @@ entries:
     - annotations:
         artifacthub.io/changes: |-
           - kind: changed
+            description: Upgraded `common` chart dependency to version rebase v1.0.0
+      apiVersion: v2
+      appVersion: v1.40.0
+      created: "2024-03-05T14:41:50.963993441Z"
+      dependencies:
+        - name: common
+          repository: https://hdubel94.github.io/library-charts
+          version: 1.0.0
+      description: Plex Media Server
+      digest: 059c5529ec64b351fce1fc621f16c3f3f7ed54311e681b36c91467b6fb665388
+      home: https://github.com/hdubel94/charts/tree/master/charts/stable/plex
+      icon: https://www.plex.tv/wp-content/uploads/2018/01/pmp-icon-1.png
+      keywords:
+        - plex
+        - plex-media-server
+      kubeVersion: ">=1.16.0-0"
+      maintainers:
+        - email: no-reply@no-reply.com
+          name: hdubel94
+      name: plex
+      sources:
+        - https://github.com/hdubel94/charts/tree/master/charts/stable/plex
+        - https://github.com/k8s-at-home/container-images/
+      urls:
+        - https://github.com/hdubel94/charts/releases/download/plex-v1.0.0/plex-1.0.0.tgz
+      version: 1.0.0
+    - annotations:
+        artifacthub.io/changes: |-
+          - kind: changed
             description: Upgraded `common` chart dependency to version 4.5.2
       apiVersion: v2
       appVersion: v1.28.0.5999-97678ded3

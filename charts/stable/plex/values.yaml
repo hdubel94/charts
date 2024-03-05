@@ -31,7 +31,7 @@ limits:
 
 image:
   # -- image repository
-  repository: linuxserver/plex
+  repository:  lscr.io/linuxserver/plex
   # @default -- chart.appVersion
   tag: 1.40.0
   # -- image pull policy

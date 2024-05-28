@@ -25,6 +25,17 @@ service:
         enabled: true
         port: 1883
 
+ingress:
+  # -- Enable and configure ingress settings for the chart under this key.
+  # @default -- See values.yaml
+  main:
+    enabled: true
+    hosts:
+      - host: "mosquitto.crimsyn.local"
+        paths:
+          - path: /
+            pathType: Prefix
+
 auth:
   # -- By enabling this, `allow_anonymous` gets set to `false` in the mosquitto config.
   enabled: false
@@ -41,7 +52,7 @@ persistence:
   # When enabled, this enables `persistence` and `persistence_location` in the mosquitto config.
   # @default -- See values.yaml
   data:
-    enabled: false
+    enabled: true
     mountPath: /mosquitto/data
   # -- Configure a persistent volume to place *.conf mosquitto-config-files in.
   # When enabled, this gets set as `include_dir` in the mosquitto config.
